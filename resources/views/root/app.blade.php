@@ -1,5 +1,10 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<?php
+    if (!isset($_SESSION)) {
+        session_start();
+    }
+?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -117,7 +122,7 @@
             $(container).load(url);
             window.history.pushState("", null, url);
             AOS.refreshHard();
-            $('html, body').animate({scrollTop: $('.container').offset().top-120}, 'slow');
+            $('html, body').animate({scrollTop: $('.container').offset().top - 120}, 'slow');
         }
     }
 </script>

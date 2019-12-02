@@ -43,6 +43,6 @@
     </div>
 </div>
 <script>
-    AOS.init();
+    $.getScript("{{asset('js/AOSInit.js')}}");
 </script>
 

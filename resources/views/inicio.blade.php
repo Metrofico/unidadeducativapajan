@@ -80,8 +80,36 @@
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col" style="margin: auto">
+            <?php
+            if (!isset($_SESSION)) {
+                session_start();
+            }
+            if (!isset($_SESSION['counter'])) { // It's the first visit in this session
+                $handle = fopen('counter.txt', "r") or die;
+                if (!$handle) {
+                    echo "Could not open the file";
+                } else {
+                    $counter = ( int )fread($handle, 20);
+                    fclose($handle);
+                    $counter++;
+                    echo " <div class='default-cursor'  style='font-size: 1.2rem; margin-top: 50px' data-aos='zoom-out-left' data-aos-delay='100'> Contador de visitas: <div class='text-bold'>" . $counter . "</div> </div> ";
+                    $handle = fopen('counter.txt', "w");
+                    fwrite($handle, $counter);
+                    fclose($handle);
+                    $_SESSION['counter'] = $counter;
+                }
+
+            } else { // It's not the first time, do not update the counter but show the total hits stored in session
+                $counter = $_SESSION['counter'];
+                echo " <div class='default-cursor' style='font-size: 1.2rem; margin-top: 50px' data-aos='zoom-out-left' data-aos-delay='100'> Contador de visitas: <div class='text-bold'>" . $counter . "</div> </div> ";
+            }
+            ?>
+        </div>
+    </div>
     <hr>
-    <div class="row c-bg-white text-center" style="padding: 50px; margin-top: 150px; margin-bottom: -50px"
+    <div class="row c-bg-white text-center" style="padding: 50px; margin-top: 50px; margin-bottom: -50px"
          data-aos="fade-down" data-aos-duration="4000">
         <div class="col" style="margin: auto">
             <a href="https://educacion.gob.ec/" target="_blank">
@@ -107,8 +135,8 @@
     </div>
 </div>
 <script>
-    AOS.init();
-    $('#continuar-leyendo').click((event)=>{
+    $.getScript("{{asset('js/AOSInit.js')}}");
+    $('#continuar-leyendo').click((event) => {
         event.preventDefault();
         loadView("#root-container", "/quienes-somos");
     });
