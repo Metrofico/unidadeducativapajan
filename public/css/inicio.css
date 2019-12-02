@@ -1,0 +1,297 @@
+body {
+    animation: all ease-in-out 500ms !important;
+    transition: all ease-in-out 500ms !important;
+}
+
+.navbar {
+    background-color: rgba(255, 255, 255, 0.88);
+    height: 12vh !important;
+    transition: all ease 400ms !important;
+}
+
+.nav-link {
+    cursor: pointer !important;
+    user-select: none !important;
+}
+
+.navbar ul li .nav-link {
+    min-width: 6.5vw !important;
+    text-align: center !important;
+    color: black !important;
+}
+
+.collapse .active .nav-link {
+    color: #000000 !important;
+    font-weight: 800 !important;
+}
+
+.navbar ul li .nav-link:hover {
+    color: white !important;
+    background: rgba(241, 150, 0, 0.95) !important;
+    border-radius: 0.21vw;
+    transform: scale(1.15);
+}
+
+.top-nav-collapse {
+    background-color: #fbfff6;
+    height: 10vh !important;
+    transition: all ease 400ms !important;
+}
+
+.top-nav-collapse .navbar-brand .logo-unidad-educativa {
+    width: 4vw !important;
+    height: 9vh !important;
+}
+
+.top-nav-collapse .collapse ul li .nav-link {
+    color: black !important;
+}
+
+.logo-unidad-educativa {
+    width: 5vw !important;
+    height: 10vh !important;
+    transition: all ease-in-out 700ms !important;
+}
+
+.text-unidad-educativa {
+    font-family: SegoeUI, sans-serif;
+    font-size: 1.5vw;
+    color: #000000;
+    transition: color ease-in-out 0.9s !important;
+}
+
+
+.top-nav-collapse .navbar-brand .text-unidad-educativa {
+    color: black !important;
+    transition: color ease-in-out 0.9s !important;
+}
+
+.top-nav-collapse .collapse ul li .nav-link:hover {
+    color: white !important;
+    background: rgba(255, 164, 51, 0.95) !important;
+}
+
+@media only screen and (max-width: 990px) {
+    .navbar {
+        background-color: #fff;
+        height: unset !important;
+    }
+
+    .top-nav-collapse {
+        background-color: #fbfff6;
+        height: unset !important;
+    }
+
+    .logo-unidad-educativa {
+        width: 11vw !important;
+        height: 9vh !important;
+        transition: all ease-in-out 700ms !important;
+    }
+
+    .text-unidad-educativa {
+        font-family: SegoeUI, sans-serif;
+        font-size: 3vw;
+        color: white;
+    }
+
+    .collapse .active .nav-link {
+        color: black !important;
+        font-weight: 800 !important;
+    }
+
+    /*
+    Al colapsarse la navegacion
+     */
+    .text-unidad-educativa {
+        font-family: SegoeUI, sans-serif;
+        color: black;
+    }
+
+    .top-nav-collapse .navbar-brand .logo-unidad-educativa {
+        width: 9vw !important;
+        height: 7vh !important;
+    }
+
+    .navbar ul li .nav-link {
+        min-width: 92vw !important;
+        text-align: center !important;
+        color: black !important;
+    }
+
+    .navbar ul li .nav-link:hover {
+        color: white !important;
+        background: rgba(0, 110, 130, 0.89) !important;
+        border-radius: 0.21vw;
+        transform: scale(1.1);
+    }
+
+    .carousel-caption-right-center {
+        max-width: 70% !important;
+    }
+}
+
+html,
+body,
+header {
+    height: 100%;
+}
+
+.carousel-inner img {
+    min-height: 101vh;
+    max-height: 101vh;
+}
+
+.carousel-caption-right-center {
+    position: absolute !important;
+    right: 10vw !important;
+    left: auto !important;
+    bottom: 0 !important;
+    top: 0 !important;
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+    max-width: 40%;
+    max-height: 100% !important;
+}
+
+.carousel-caption-left-center {
+    position: absolute !important;
+    left: 10vw !important;
+    right: auto !important;
+    bottom: 0 !important;
+    top: 0 !important;
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+    max-width: 40%;
+    max-height: 100% !important;
+}
+
+.vertical-center {
+    margin: auto !important;
+}
+
+.c-bg-dark-light {
+    background-color: rgba(133, 143, 132, 0.67);
+}
+
+.c-bg-linear-red-gray {
+    background: linear-gradient(90deg, #ffed4b 2%, rgba(93, 92, 98, 0.74) 0%);
+}
+
+.justify-text {
+    text-align: justify !important;
+    text-justify: inter-word !important;
+}
+
+.text-bold {
+    font-weight: bolder !important;
+}
+
+.text-normal {
+    font-weight: 100 !important;
+}
+
+.text-small {
+    font-size: 19px !important;
+}
+
+.line-default {
+    line-height: normal !important;
+}
+
+.container-text {
+    padding: 20px !important;
+}
+
+.title-slide {
+    color: white !important;
+    font-size: 4vh !important;
+}
+
+.c-bg-gray-dark {
+    background: rgba(85, 89, 91, 0.72);
+}
+
+.description-slide {
+    color: whitesmoke !important;
+    font-size: 20px !important;
+    font-family: "Roboto", sans-serif;
+}
+
+@font-face {
+    font-family: SegoeUI;
+    src: local("Segoe UI"),
+    url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.woff2) format("woff2"),
+    url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.woff) format("woff"),
+    url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.ttf) format("truetype");
+    font-weight: 400;
+}
+
+.AcercaDeNosotros {
+    font-size: 3rem;
+}
+
+.que-ofertamos {
+    font-size: 2.6rem;
+    font-family: 'Permanent Marker', cursive;
+    font-weight: 800;
+}
+
+.PermanentMarkerFont {
+    font-family: 'Permanent Marker', cursive;
+}
+
+.default-cursor {
+    user-select: none !important;
+    cursor: default !important;
+}
+
+.c-text-center {
+    text-align: center !important;
+}
+
+.scale-up {
+    transition: all ease-in-out 500ms !important;
+}
+
+.c-bg-white {
+    background: white !important;
+}
+
+.c-bg-footer {
+    background: #1c1c1c !important;
+}
+
+.scale-up:hover {
+    transform: scale(1.2);
+    font-size: 1.5rem !important;
+    transition: all ease-in-out 500ms !important;
+}
+
+.img-circular {
+    margin: 3vw;
+}
+
+.img-circular img {
+    min-height: 90px;
+    max-height: 90px;
+}
+
+.continuar-leyendo {
+    display: inline !important;
+    cursor: pointer;
+    font-size: 12px;
+    margin-left: 5px;
+    background: #d25a26;
+    color: white;
+    padding: 3px;
+    border-radius: 5px;
+    transition: all ease 300ms !important;
+}
+
+.continuar-leyendo:hover {
+    display: inline !important;
+    background: #854c00;
+    color: white;
+    padding: 3px;
+    border-radius: 5px;
+}

@@ -1,0 +1,10 @@
+.footer-container {
+    position: relative;
+}
+
+
+.footer-text-copyright {
+    padding-top: 30px !important;
+    padding-left: 50px !important;
+    padding-bottom: 10px !important;
+}
