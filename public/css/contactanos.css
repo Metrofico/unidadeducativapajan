@@ -1,0 +1,26 @@
+.card {
+    border-radius: 20px !important;
+    transition: all ease-in-out 500ms !important;
+}
+
+.card-img-top {
+
+}
+.email-us{
+    transform: translatey(0px);
+    animation: float 4s ease-in-out infinite;
+}
+main{
+    background: rgba(220, 240, 226, 0.65);
+}
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-20px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}

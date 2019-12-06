@@ -12,18 +12,27 @@
 */
 
 
-if (Request::ajax()) {
-    Route::get('/', function () {
-        return View::make('inicio');
-    })->name('inicio');
-    Route::get('/quienes-somos', function () {
-        return View::make('quienesomos');
-    })->name('quienes-somos');
-} else {
-    Route::get('/quienes-somos', function () {
-        return View::make('quienessomosroot');
-    })->name('quienes-somos');
-    Route::get('/', function () {
-        return view('inicioroot');
-    })->name('inicio');
-}
+Route::get('/', function () {
+    return Request::ajax() ? View::make('inicio') : view('root.inicioroot');
+})->name('inicio');
+
+Route::get('/quienes-somos', function () {
+    return Request::ajax() ? view('quienesomos') : view('root.quienessomosroot');
+})->name('quienes-somos');
+
+Route::get('/slider', function () {
+    return Request::ajax() ? View::make('sliders.rootslider') : null;
+})->name('slider');
+
+Route::get('/reseña-historica', function () {
+    return Request::ajax() ? View::make('reseñahistorica') : view('root.reseñahistoricaroot');
+})->name('reseña-historica');
+
+Route::get('/autoridades', function () {
+    return Request::ajax() ? View::make('autoridades') : view('root.autoridadesroot');
+})->name('autoridades');
+
+Route::get('/contactanos', function () {
+    return Request::ajax() ? View::make('contactanos') : view('root.contactanosroot');
+})->name('contactanos');
+

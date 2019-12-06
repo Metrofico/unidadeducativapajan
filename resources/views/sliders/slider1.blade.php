@@ -2,7 +2,7 @@
     <div class="view">
         <img class="d-block w-100" src="{{asset('pngs/slide1.png')}}"
              alt="First slide">
-        <div class="mask rgba-black-light"></div>
+        <div class="mask rgba-black-slight"></div>
     </div>
     <div class="row carousel-caption-right-center">
         <div class="col vertical-center">

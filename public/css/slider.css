@@ -1,0 +1,39 @@
+.carousel-inner img {
+    min-height: 101vh;
+    max-height: 101vh;
+}
+header{
+    height: 100% !important;
+}
+.carousel-caption-right-center {
+    position: absolute !important;
+    right: 10vw !important;
+    left: auto !important;
+    bottom: 0 !important;
+    top: 0 !important;
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+    max-width: 40%;
+    max-height: 100% !important;
+}
+
+.carousel-caption-left-center {
+    position: absolute !important;
+    left: 10vw !important;
+    right: auto !important;
+    bottom: 0 !important;
+    top: 0 !important;
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+    max-width: 40%;
+    max-height: 100% !important;
+}
+@media only screen and (max-width: 990px) {
+    .carousel-caption-right-center {
+        max-width: 70% !important;
+    }
+
+    .carousel-caption-left-center {
+        max-width: 70% !important;
+    }
+}

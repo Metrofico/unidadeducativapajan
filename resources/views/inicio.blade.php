@@ -1,13 +1,13 @@
 <div class="container">
     <div class="row" style="margin-top: 100px">
-        <div class="col" style="margin: auto">
+        <div class="col-md-6" style="margin: auto">
             <div class="default-cursor animated slideInDown slower PermanentMarkerFont AcercaDeNosotros"
                  data-aos="zoom-out">
                 Acerca de Nosotros
 
             </div>
         </div>
-        <div class="col" style="margin: auto">
+        <div class="col-md-6 p-5" style="margin: auto">
             <div class="justify-text default-cursor" data-aos="fade-left" data-aos-duration="4000">
                 La educación en un proceso de formación integral de los seres humanos, tanto es el caso de los
                 habitantes de
@@ -94,7 +94,7 @@
                     $counter = ( int )fread($handle, 20);
                     fclose($handle);
                     $counter++;
-                    echo " <div class='default-cursor'  style='font-size: 1.2rem; margin-top: 50px' data-aos='zoom-out-left' data-aos-delay='100'> Contador de visitas: <div class='text-bold'>" . $counter . "</div> </div> ";
+                    echo " <div class='default-cursor'  style='font-size: 1.2rem; margin-top: 50px' data-aos='fade-left' data-aos-duration='2000'> Contador de visitas: <div class='text-bold'>" . $counter . "</div> </div> ";
                     $handle = fopen('counter.txt', "w");
                     fwrite($handle, $counter);
                     fclose($handle);
@@ -103,7 +103,7 @@
 
             } else { // It's not the first time, do not update the counter but show the total hits stored in session
                 $counter = $_SESSION['counter'];
-                echo " <div class='default-cursor' style='font-size: 1.2rem; margin-top: 50px' data-aos='zoom-out-left' data-aos-delay='100'> Contador de visitas: <div class='text-bold'>" . $counter . "</div> </div> ";
+                echo " <div class='default-cursor' style='font-size: 1.2rem; margin-top: 50px' data-aos='fade-left' data-aos-duration='2000'> Contador de visitas: <div class='text-bold'>" . $counter . "</div> </div> ";
             }
             ?>
         </div>
@@ -126,11 +126,6 @@
                 <img src="{{asset('pngs/snna.png')}}" alt="">
             </a>
 
-        </div>
-        <div class="col" style="margin: auto">
-            <a href="http://sime.educacion.gob.ec/" target="_blank">
-                <img src="{{asset('pngs/sime.png')}}" alt="">
-            </a>
         </div>
     </div>
 </div>

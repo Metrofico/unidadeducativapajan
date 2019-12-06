@@ -1,9 +1,14 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <?php
-    if (!isset($_SESSION)) {
-        session_start();
-    }
+if (!isset($_SESSION)) {
+    session_start();
+}
+// ESTO ES PARA EN LISTAR LAS RUTAS QUE DESEA TENER EL SLIDER
+$GLOBALS['rutas'] = [
+    "inicio",
+    "quienes-somos"
+];
 ?>
 <head>
     <meta charset="UTF-8">
@@ -16,15 +21,16 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Jquery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="{{asset('js/jquery-3.4.1.min.js')}}"></script>
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.css">
+    <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
     <!-- Material Design Bootstrap -->
     <link rel="stylesheet" href="{{asset('/css/inicio.css')}}">
     <link href="{{asset('css/mdb.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/animate.css')}}">
     @yield('linked')
     <link rel="stylesheet" href="{{asset('css/footer.css')}}">
+    <link rel="stylesheet" href="{{asset('lightbox/ekko-lightbox.css')}}">
     <script type="text/javascript" src="{{asset('js/mdb.js')}}"></script>
 </head>
 <body>
@@ -41,53 +47,32 @@
             </span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto mr-5">
-                <li class="nav-item {{isCurrentLocation('inicio')}}">
-                    <div id="inicio" class="nav-link">Inicio <span
-                            class="sr-only">(current)</span></div>
+            <ul class="navbar-nav ml-auto mr-5 navbar-uepajan">
+                <li id="inicio" class="nav-item">
+                    <div class="inicio nav-link">Inicio</div>
                 </li>
-                <li class="nav-item">
-                    <div id="quienes_somos" class="nav-link">¿Quiénes somos?</div>
+                <li id="quienes-somos" class="nav-item">
+                    <div class="quienes-somos nav-link">¿Quiénes somos?</div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Reseña historica</a>
+                <li id="reseña-historica" class="nav-item">
+                    <div class="reseña-historica nav-link">Reseña histórica</div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Autoridades</a>
+                <li id="autoridades" class="nav-item">
+                    <div class="autoridades nav-link">Autoridades</div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Actividades y eventos</a>
+                <li id="actividades-y-eventos" class="nav-item">
+                    <a class="actividades-eventos nav-link" href="#">Actividades y eventos</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contacto</a>
+                <li id="contactanos" class="nav-item">
+                    <div class="contactanos nav-link">Contacto</div>
                 </li>
             </ul>
         </div>
     </nav>
-
-    <div id="carousel-image" class="carousel slide carousel-fade" data-ride="carousel">
-        <!--Indicadores-->
-        <ol class="carousel-indicators">
-
-            <li data-target="#carousel-image" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-image" data-slide-to="1" class="active"></li>
-        </ol>
-        <!--/.Fin de indicadores-->
-        <!--Inicio de slides-->
-        <div class="carousel-inner" role="listbox">
-            @include("sliders.slider1")
-            @include("sliders.slider2")
-        </div>
-        <!--/.Fin de slides-->
-        <!--Controles-->
-        <a class="carousel-control-prev" href="#carousel-image" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-
-        </a>
-        <a class="carousel-control-next" href="#carousel-image" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        </a>
-        <!--/.Controles-->
+    <div class="container-slider-root">
+        @if(sliderPermitidoEnRuta()=="slider-permitido")
+            @include("sliders.rootslider")
+        @endif
     </div>
 </header>
 <main class="text-center py-5 mt-3">
@@ -99,30 +84,100 @@
 <!-- No Tocar -->
 <!-- Tooltip Bootstrap -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.js"></script>
+<script src="{{asset('js/popper.min.js')}}"></script>
 <!-- Bootstrap JS -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.js"></script>
+<script src="{{asset('js/bootstrap.js')}}"></script>
+<script src="{{asset('lightbox/ekko-lightbox.js')}}"></script>
 <!-- MDB core JavaScript -->
 <!-- Carga dinamica de vistas -->
 <script>
-    AOS.init();
-    $('#quienes_somos').click((event) => {
+    activeNav(window.location.pathname);
+    $(document).ready(function () {
+        AOS.init();
+        AOS.refresh();
+    });
+    $(document).on('click', '[data-toggle="lightbox"]', function (event) {
+        event.preventDefault();
+        $(this).ekkoLightbox();
+    });
+    $('.quienes-somos').click((event) => {
         event.preventDefault();
         loadView("#root-container", "/quienes-somos");
-        //$("#root-container").load("/quienes-somos");
     });
-    $('#inicio').click((event) => {
+    $('.inicio').click((event) => {
         event.preventDefault();
         loadView("#root-container", "/");
-        //$("#root-container").load("/quienes-somos");
     });
+    $('.reseña-historica').click((event) => {
+        event.preventDefault();
+        loadView("#root-container", "/reseña-historica", "200");
+        removeSlider();
+    });
+    $('.autoridades').click((event) => {
+        event.preventDefault();
+        loadView("#root-container", "/autoridades", "200");
+        removeSlider();
+    });
+    $('.contactanos').click((event) => {
+        event.preventDefault();
+        loadView("#root-container", "/contactanos", "200");
+        removeSlider();
+    });
+    function removeSlider() {
+        $("header").css("height", "10%");
+        $(".container-slider-root ").empty();
+    }
 
-    function loadView(container, url) {
+    function updateSlider(url) {
+        if (url === "/") {
+            url = "/inicio";
+        }
+        let a = JSON.parse('<?php
+            $rutas = $GLOBALS["rutas"];
+            echo json_encode($rutas); ?>');
+        a.forEach(e => {
+            let urlsub = url.substring(1, url.length);
+            if (e === urlsub) {
+                let c = $(".container-slider-root");
+                if (c.children().length === 0) {
+                    $("header").css("height", "100%");
+                    c.load("/slider");
+
+                }
+            }
+        });
+    }
+
+    function activeNav(url) {
+        url = decodeURI(url);
+        if (url === "/") {
+            url = "/inicio";
+        }
+        $(".navbar-uepajan").find("li").each(function () {
+            let element = $(this);
+            let urlsub = url.substring(1, url.length);
+            if (element.attr("id") === urlsub) {
+                element.addClass("active");
+            } else {
+                element.removeClass("active");
+            }
+
+        });
+    }
+
+    function loadView(container, url, presicion = 120) {
         if (window.location.pathname !== url) {
+            activeNav(url);
+            updateSlider(url);
+            if (!$(this).hasClass('dropdown-toggle')) {
+                $('.navbar-collapse').collapse('hide');
+            }
             $(container).load(url);
             window.history.pushState("", null, url);
             AOS.refreshHard();
-            $('html, body').animate({scrollTop: $('.container').offset().top - 120}, 'slow');
+            $('.container-slider-root').ready(function () {
+                $('html, body').animate({scrollTop: $('.container').offset().top - presicion}, 'slow');
+            })
         }
     }
 </script>
