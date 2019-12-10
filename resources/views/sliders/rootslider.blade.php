@@ -11,6 +11,7 @@
     <div class="carousel-inner" role="listbox">
         @include("sliders.slider1")
         @include("sliders.slider2")
+
     </div>
     <!--/.Fin de slides-->
     <!--Controles-->

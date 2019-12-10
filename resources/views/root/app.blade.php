@@ -15,6 +15,7 @@ $GLOBALS['rutas'] = [
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#FFA433"/>
     <title>@yield('titulo', 'Unidad Educativa Paján')</title>
     <!-- Font Awesome -->
     <link href='https://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
@@ -24,12 +25,14 @@ $GLOBALS['rutas'] = [
     <script src="{{asset('js/jquery-3.4.1.min.js')}}"></script>
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <!-- Material Design Bootstrap -->
     <link rel="stylesheet" href="{{asset('/css/inicio.css')}}">
     <link href="{{asset('css/mdb.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/animate.css')}}">
     @yield('linked')
     <link rel="stylesheet" href="{{asset('css/footer.css')}}">
+
     <link rel="stylesheet" href="{{asset('lightbox/ekko-lightbox.css')}}">
     <script type="text/javascript" src="{{asset('js/mdb.js')}}"></script>
 </head>
@@ -60,8 +63,8 @@ $GLOBALS['rutas'] = [
                 <li id="autoridades" class="nav-item">
                     <div class="autoridades nav-link">Autoridades</div>
                 </li>
-                <li id="actividades-y-eventos" class="nav-item">
-                    <a class="actividades-eventos nav-link" href="#">Actividades y eventos</a>
+                <li id="actividades-eventos" class="nav-item">
+                    <div class="actividades-eventos nav-link">Actividades y eventos</div>
                 </li>
                 <li id="contactanos" class="nav-item">
                     <div class="contactanos nav-link">Contacto</div>
@@ -80,6 +83,7 @@ $GLOBALS['rutas'] = [
         @yield('cuerpo')
     </div>
 </main>
+
 @include('root.footer')
 <!-- No Tocar -->
 <!-- Tooltip Bootstrap -->
@@ -98,31 +102,46 @@ $GLOBALS['rutas'] = [
     });
     $(document).on('click', '[data-toggle="lightbox"]', function (event) {
         event.preventDefault();
-        $(this).ekkoLightbox();
+        $(this).ekkoLightbox({
+            onShown: function () {
+                $("body").css('overflow', "hidden");
+            },
+            onHide: function () {
+                $("body").css('overflow', "visible");
+            }
+        });
+    });
+
+    // Rutas en base a elementos
+    $('.inicio').click((event) => {
+        event.preventDefault();
+        loadView("#root-container", "/", 1, 1, 1000);
     });
     $('.quienes-somos').click((event) => {
         event.preventDefault();
-        loadView("#root-container", "/quienes-somos");
-    });
-    $('.inicio').click((event) => {
-        event.preventDefault();
-        loadView("#root-container", "/");
+        loadView("#root-container", "/quienes-somos", 50);
     });
     $('.reseña-historica').click((event) => {
         event.preventDefault();
-        loadView("#root-container", "/reseña-historica", "200");
+        loadView("#root-container", "/reseña-historica", 200);
         removeSlider();
     });
     $('.autoridades').click((event) => {
         event.preventDefault();
-        loadView("#root-container", "/autoridades", "200");
+        loadView("#root-container", "/autoridades", 200);
         removeSlider();
     });
     $('.contactanos').click((event) => {
         event.preventDefault();
-        loadView("#root-container", "/contactanos", "200");
+        loadView("#root-container", "/contactanos", 200);
         removeSlider();
     });
+    $('.actividades-eventos').click((event) => {
+        event.preventDefault();
+        loadView("#root-container", "/actividades-eventos", 200);
+        removeSlider();
+    });
+
     function removeSlider() {
         $("header").css("height", "10%");
         $(".container-slider-root ").empty();
@@ -165,19 +184,30 @@ $GLOBALS['rutas'] = [
         });
     }
 
-    function loadView(container, url, presicion = 120) {
-        if (window.location.pathname !== url) {
+    function loadView(container, url, presicion = 120, top = 0, time = 1300) {
+        let pathname = decodeURI(window.location.pathname);
+        console.log("path: " + pathname + " variable: " + url);
+        if (pathname !== url) {
             activeNav(url);
             updateSlider(url);
             if (!$(this).hasClass('dropdown-toggle')) {
                 $('.navbar-collapse').collapse('hide');
             }
-            $(container).load(url);
-            window.history.pushState("", null, url);
-            AOS.refreshHard();
-            $('.container-slider-root').ready(function () {
-                $('html, body').animate({scrollTop: $('.container').offset().top - presicion}, 'slow');
-            })
+            $(container).load(url, function () {
+                window.history.pushState("", null, url);
+                if (presicion !== 0) {
+                    $('.replacer-root').ready(function () {
+                        $(document).ready(function () {
+                            $('body, html').animate({
+                                easing: "swing",
+                                queue: false,
+                                overrideOverflow: "hidden",
+                                scrollTop: top === 1 ? top : $('.container').offset().top - presicion
+                            }, time);
+                        });
+                    });
+                }
+            });
         }
     }
 </script>

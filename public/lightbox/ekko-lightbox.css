@@ -91,10 +91,14 @@
     display: none
 }
 
-.ekko-lightbox .modal-footer {
-    text-align: left
+.modal-footer{
+    align-items: start;
+    align-self: start;
+    align-content: start;
+    text-align: justify !important;
+    font-size: 1.1rem !important;
+    text-align-last: left !important;
 }
-
 .ekko-lightbox-loader {
     position: absolute;
     top: 0;

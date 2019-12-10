@@ -10,6 +10,10 @@ function isCurrentLocationBool($route)
     return request()->routeIs($route);
 }
 
+
+function checkvariable($v){
+    echo $v;
+}
 function sliderPermitidoEnRuta()
 {
     $rutas = $GLOBALS["rutas"];

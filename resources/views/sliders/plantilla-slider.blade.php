@@ -1,10 +1,13 @@
 <div class="carousel-item active">
     <div class="view">
+        {{-- IMAGEN DEL SLIDER --}}
         <img class="d-block w-100" src="{{asset('pngs/slide1.png')}}"
-             alt="Unidad Educativa Pajan Primer Imagen Slider">
+             alt="Ejempl imagen">
+        {{-- MASCARA DE LA IMAGEN puede ser slight | light | strong --}}
         <div class="mask rgba-black-slight"></div>
     </div>
     <div class="row carousel-caption-right-center">
+        {{-- CONTENIDO Y CUERPO DEL SLIDER --}}
         <div class="col vertical-center">
             <div class="container-text c-bg-dark-light animated slideInRight slower">
                                 <span class="title-slide scale-up default-cursor text-bold">

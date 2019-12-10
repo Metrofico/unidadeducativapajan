@@ -1,4 +1,4 @@
-<div class="container">
+<div class="replacer-root container">
     <div class="row">
         <div class="col" style="margin: auto">
             <div class="default-cursor animated slideInDown slower PermanentMarkerFont FontSize3rem"
@@ -39,6 +39,8 @@
                  data-aos-duration="2400">
                 <div class="col-md-6" style="margin: auto" data-aos="fade-right" data-aos-duration="2400">
                     <a href="{{asset('img/resena/resena1.png')}}" data-toggle="lightbox" data-gallery="resena-galeria"
+                       data-width="300"
+                       data-height="200"
                        class="d-inline">
                         <img src="{{asset('img/resena/resena1.png')}}" class="img-fluid">
                     </a>
@@ -90,17 +92,21 @@
                     </div>
                 </div>
                 <div class="col-md-6" style="margin: auto" data-aos="fade-left" data-aos-duration="2400">
-                    <div data-remote="{{asset('img/resena/resena2.png')}}" data-toggle="lightbox" data-type="image"
-                         data-gallery="resena-galeria"
-                         class="resena2 d-inline">
+                    <a href="{{asset('img/resena/resena2.png')}}" data-toggle="lightbox" data-type="image"
+                       data-gallery="resena-galeria"
+                       data-width="300"
+                       data-height="200"
+                       class="resena2 d-inline">
                         <img src="{{asset('img/resena/resena2.png')}}" class="img-fluid">
-                    </div>
+                    </a>
                 </div>
             </div>
             <div class="row mt-3 ml-2 mr-2" data-aos="fade-up"
                  data-aos-duration="2400">
                 <div class="col-md-6" style="margin: auto" data-aos="fade-right" data-aos-duration="2400">
                     <a href="{{asset('img/resena/resena3.png')}}" data-toggle="lightbox" data-gallery="resena-galeria"
+                       data-width="300"
+                       data-height="200"
                        class="resena2 d-inline">
                         <img src="{{asset('img/resena/resena3.png')}}" class="img-fluid">
                     </a>
@@ -146,6 +152,8 @@
                 </div>
                 <div class="col-md-6" style="margin: auto" data-aos="fade-left" data-aos-duration="2400">
                     <a href="{{asset('img/resena/resena4.png')}}" data-toggle="lightbox" data-gallery="resena-galeria"
+                       data-width="300"
+                       data-height="200"
                        class="resena2 d-inline">
                         <img src="{{asset('img/resena/resena4.png')}}" class="img-fluid">
                     </a>
@@ -165,6 +173,8 @@
                  data-aos-duration="2400">
                 <div class="col-md-6" style="margin: auto" data-aos="fade-right" data-aos-duration="2400">
                     <a href="{{asset('img/resena/resena5.png')}}" data-toggle="lightbox" data-gallery="resena-galeria"
+                       data-width="300"
+                       data-height="200"
                        class="resena2 d-inline">
                         <img src="{{asset('img/resena/resena5.png')}}" class="img-fluid">
                     </a>

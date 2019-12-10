@@ -1,17 +1,23 @@
 <style type="text/css">
-    table tbody tr td{
-        color:  black !important;
+    table tbody tr td {
+        color: black !important;
         font-size: 1.1rem !important;
         font-family: Roboto, sans-serif;
     }
 </style>
-<div class="container">
+<div class="replacer-root container">
     <div class="row">
         <div class="col" style="margin: auto">
             <div class="default-cursor animated slideInDown slower PermanentMarkerFont FontSize2rem"
                  data-aos="zoom-out">
                 AUTORIDADES, DOCENTES, PERSONAL DE SERVICIOS Y DE APOYO ACTUALES.
             </div>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col" style="margin: auto">
+            <img class="animated zoomIn slower" src="{{asset('img/general/profesores.png')}}"
+                 alt="Profesores Unidad Educativa Pajan">
         </div>
     </div>
 

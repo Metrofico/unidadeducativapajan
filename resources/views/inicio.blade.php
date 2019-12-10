@@ -1,4 +1,4 @@
-<div class="container">
+<div class="replacer-root container">
     <div class="row" style="margin-top: 100px">
         <div class="col-md-6" style="margin: auto">
             <div class="default-cursor animated slideInDown slower PermanentMarkerFont AcercaDeNosotros"

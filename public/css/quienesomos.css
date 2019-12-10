@@ -1,0 +1,44 @@
+.titulo-mensaje-mision {
+    width: 100%;
+    overflow-x: hidden !important;
+    padding: 30px;
+    background: linear-gradient(140deg, #bf7646 35%, rgba(53, 52, 58, 0.74) 0%);
+}
+
+.titulo-mensaje-vision {
+    width: 100%;
+    overflow-x: hidden !important;
+    padding: 30px;
+    background: linear-gradient(220deg, #efce47 35%, rgba(53, 52, 58, 0.74) 0%);
+}
+
+.mision {
+    margin-left: 30px;
+    color: white;
+}
+
+.fix-container-aos {
+    overflow: hidden !important;
+}
+
+.vision {
+    margin-right: 30px;
+}
+
+@media only screen and (max-width: 990px) {
+    .titulo-mensaje-mision {
+        background: linear-gradient(140deg, #bf7646 55%, rgba(53, 52, 58, 0.74) 0%);
+    }
+
+    .titulo-mensaje-vision {
+        background: linear-gradient(220deg, #efce47 55%, rgba(53, 52, 58, 0.74) 0%);
+    }
+
+    .mision {
+        margin-left: 10px;
+    }
+
+    .vision {
+        margin-right: 10px;
+    }
+}

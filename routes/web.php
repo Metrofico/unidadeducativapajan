@@ -35,4 +35,11 @@ Route::get('/autoridades', function () {
 Route::get('/contactanos', function () {
     return Request::ajax() ? View::make('contactanos') : view('root.contactanosroot');
 })->name('contactanos');
+Route::post('/send-email', "sendEmail@sendEmail");
+Route::get('/actividades-eventos', function () {
+    return Request::ajax() ? View::make('actividades-eventos') : view('root.actividades-eventosroot');
+})->name('actividades-eventos');
 
+Route::get('/ejemplo', function (){
+    return Request::ajax() ? View::make('ejemplo') : view('root.ejemplo');
+})->name('ejemplo');
