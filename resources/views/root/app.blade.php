@@ -41,7 +41,7 @@ $GLOBALS['rutas'] = [
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
         <a class="navbar-brand" href="#">
             <img class="logo-unidad-educativa" src="{{asset('pngs/ue_pajan.png')}}" alt="">
-            <span class="text-unidad-educativa"><b><b><b>UNIDAD</b></b></b> EDUCATIVA FISCAL PAJÁN</span>
+            <span class="text-unidad-educativa"><b><b>UNIDAD EDUCATIVA FISCAL PAJÁN</b></b> </span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

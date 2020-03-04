@@ -20,7 +20,7 @@
                  data-aos-duration="1400">
                 <div>
                     <img class="card-img-top text-center email-us" style="width: 35vw; height: 35vh"
-                         src="{{asset('svgs/contactanos.svg')}}"
+                         src="{{asset('svgs/ue_pajan.svg')}}"
                          alt="Contactanos Pajan">
                 </div>
                 <div class="card-body">
@@ -94,6 +94,7 @@
         $(".alert").toggleClass('fade out');
         return false; // Mantiene el evento close.bs.alert cada vez que es removido del DOM
     }
+
     function clearInput() {
         $("#inputNombre").focus().val('');
         $("#inputApellido").focus().val('');
@@ -101,6 +102,7 @@
         $("#inputCorreo").focus().val('');
         $("#textarea-char-counter").focus().val('');
     }
+
     $('#bsalert').on('close.bs.alert', toggleAlert);
     $("#enviar-mensaje").click(function (e) {
         e.preventDefault();

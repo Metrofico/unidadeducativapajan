@@ -18,13 +18,19 @@ body {
     min-width: 6.5vw !important;
     text-align: center !important;
     color: black !important;
-}
-
-.collapse .active .nav-link {
-    color: #000000 !important;
     font-weight: 800 !important;
 }
-
+/*
+ Cambiar el color al texto cuando es seleccionado
+ */
+.collapse .active .nav-link {
+    color: rgba(241, 150, 0, 0.95) !important;
+    font-weight: 800 !important;
+}
+.top-nav-collapse .collapse .active .nav-link {
+    color: rgba(241, 150, 0, 0.95) !important;
+    font-weight: 800 !important;
+}
 .navbar ul li .nav-link:hover {
     color: white !important;
     background: rgba(241, 150, 0, 0.95) !important;
@@ -46,6 +52,7 @@ body {
 .top-nav-collapse .collapse ul li .nav-link {
     color: black !important;
 }
+
 
 .logo-unidad-educativa {
     width: 5vw !important;
@@ -100,7 +107,7 @@ body {
     }
 
     .collapse .active .nav-link {
-        color: black !important;
+        color: red !important;
         font-weight: 800 !important;
     }
 
@@ -132,10 +139,11 @@ body {
 }
 
 html,
-body{
+body {
     height: 100%;
 }
-header{
+
+header {
     height: 10%;
 }
 
@@ -190,12 +198,15 @@ header{
     font-size: 20px !important;
     font-family: "Roboto", sans-serif;
 }
-.FontSize2rem{
+
+.FontSize2rem {
     font-size: 2rem;
 }
-.FontSize3rem{
+
+.FontSize3rem {
     font-size: 3rem;
 }
+
 .AcercaDeNosotros {
     font-size: 3rem;
 }

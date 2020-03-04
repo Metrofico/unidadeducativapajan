@@ -20,7 +20,66 @@
                  alt="Profesores Unidad Educativa Pajan">
         </div>
     </div>
+    <div class="row" style="margin-top: 100px; margin-bottom: 100px">
+        <div class="col" style="margin: auto">
+           <div class="animated slideInDown slower PermanentMarkerFont FontSize2rem" data-aos="zoom-out">
+                Rectora
+           </div>
+            <div class="FontSize2rem">
+                Lic. BLANCA MARIVEL MIELES MIELES, Mgs
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 100px; margin-bottom: 10px">
+        <div class="col" style="margin: auto">
+            <div class="animated slideInDown slower PermanentMarkerFont FontSize2rem" data-aos="zoom-out">
+                VICERRECTORADO
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 1px; margin-bottom: 100px">
+        <div class="col" style="margin: auto">
+            <table class="table table-striped" data-aos="fade-up" data-aos-duration="2400">
+                <thead>
+                <tr>
+                    <th scope="col" style="background:white; color:Black">No.</th>
+                    <th scope="col" style="background:white; color:Black">NÓMINA</th>
+                    <th scope="col" style="background:white; color:Black">RESPONSABLE</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row" style="background:white; color:Black">1</th>
+                    <td>Lic. FLORENCIO POLIC ACEBO VILLEGAS</td>
+                    <td>VESPERTINA</td>
+                </tr>
+                <tr>
+                    <th scope="row" style="background:white; color:Black">2</th>
+                    <td>Lic. GRACE MIRIAM ACEBO VILLEGAS</td>
+                    <td>MATUTINA</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 100px; margin-bottom: 10px">
+        <div class="col" style="margin: auto">
+            <div class="animated slideInDown slower PermanentMarkerFont FontSize2rem" data-aos="zoom-out">
+                SECRETARIA
+            </div>
+            <div class="FontSize2rem">
+                Sec. Ejec. EVELYN ADRIANA OSORIO PALACIOS
+            </div>
+        </div>
+    </div>
 
+    <div class="row" style="margin-top: 100px; margin-bottom: 10px">
+        <div class="col" style="margin: auto">
+            <div class="animated slideInDown slower PermanentMarkerFont FontSize2rem" data-aos="zoom-out">
+                DOCENTES
+            </div>
+        </div>
+    </div>
     <div class="row" style="margin-top: 100px; margin-bottom: 100px">
         <div class="col" style="margin: auto">
             <table class="table table-striped" data-aos="fade-up" data-aos-duration="2400">
@@ -67,11 +126,7 @@
                     <td>Lic. JAVIER ABEL EFRAÍN BAYAS SILVA</td>
                     <td>DOCENTE</td>
                 </tr>
-                <tr>
-                    <th scope="row" style="background:white; color:Black">8</th>
-                    <td>Sr. PEDRO TITO CABRERA ALCHUNDIA</td>
-                    <td>SERVICIO</td>
-                </tr>
+
                 <tr>
                     <th scope="row" style="background:white; color:Black">9</th>
                     <td>Lic. MÓNICA ALEXANDRA CALDERÓN PINARGOTE</td>
@@ -102,11 +157,7 @@
                     <td>Prof. JULIO CÉSAR CIVINTA PLAZA</td>
                     <td>DOCENTE</td>
                 </tr>
-                <tr>
-                    <th scope="row" style="background:white; color:Black">15</th>
-                    <td>Sr. JAVIER EDUARDO CORONEL ESPINOZA</td>
-                    <td>SERVICIO</td>
-                </tr>
+
                 <tr>
                     <th scope="row" style="background:white; color:Black">16</th>
                     <td>Tnlgo. RUFO AUGUSTO FRANCO YEPEZ</td>
@@ -127,11 +178,7 @@
                     <td>Lic. JORGE RAMÓN GUTÍERREZ CHÓEZ</td>
                     <td>DOCENTE</td>
                 </tr>
-                <tr>
-                    <th scope="row" style="background:white; color:Black">20</th>
-                    <td>Sra. MARÍA FERNANDA LEÓN CATUTO</td>
-                    <td>BIBLIOTECARIA</td>
-                </tr>
+
                 <tr>
                     <th scope="row" style="background:white; color:Black">21</th>
                     <td>Lic. NELSON HORACIO LÓPEZ CONSTANTE</td>
@@ -162,11 +209,7 @@
                     <td>Ing. ULBIO MOISÉS MARCILLO CHÓEZ</td>
                     <td>DOCENTE</td>
                 </tr>
-                <tr>
-                    <th scope="row" style="background:white; color:Black">27</th>
-                    <td>Sr. NELSON LUCIANO MÁRQUEZ CHÓEZ</td>
-                    <td>APOYO</td>
-                </tr>
+
                 <tr>
                     <th scope="row" style="background:white; color:Black">28</th>
                     <td>Econ. CARLOS LUIS MÁRQUEZ GUTÍERRES</td>
@@ -207,11 +250,7 @@
                     <td>Ing. LIL ANABEL MIELES ALCIVAR</td>
                     <td>DOCENTE</td>
                 </tr>
-                <tr>
-                    <th scope="row" style="background:white; color:Black">36</th>
-                    <td>Lic. BLANCA MARIVEL MIELES MIELES, Mgs</td>
-                    <td>RECTORA</td>
-                </tr>
+
                 <tr>
                     <th scope="row" style="background:white; color:Black">37</th>
                     <td>Lic. MARY LUZ MUÑOZ GUADAMUD</td>
@@ -262,11 +301,7 @@
                     <td>Lic. ELIDA LIDIA PINCAY NUÑEZ</td>
                     <td>DOCENTE</td>
                 </tr>
-                <tr>
-                    <th scope="row" style="background:white; color:Black">47</th>
-                    <td>Dra. LETTY NARCISA PLAZA CALDERON</td>
-                    <td>ODONTÓLOGA</td>
-                </tr>
+
                 <tr>
                     <th scope="row" style="background:white; color:Black">48</th>
                     <td>Lic. VILMA SEBASTIANA PLAZA CALDERON</td>
@@ -322,11 +357,7 @@
                     <td>Egres. NEFFER KARINA SÁNCHEZ PIN</td>
                     <td>DOCENTE</td>
                 </tr>
-                <tr>
-                    <th scope="row" style="background:white; color:Black">59</th>
-                    <td>Lic. DIEGO ALEJANDRO SÁNCHEZ VERA</td>
-                    <td>PSICÓLOGO – DECE</td>
-                </tr>
+
                 <tr>
                     <th scope="row" style="background:white; color:Black">60</th>
                     <td>Egres. ERWIN PATRICIO SORNOZA QUIJIJE</td>
@@ -367,12 +398,83 @@
                     <td>Lic. DOLLY BENITA VILLAMAR QUIMÍ</td>
                     <td>DOCENTE</td>
                 </tr>
-
                 </tbody>
             </table>
 
         </div>
     </div>
+
+    <div class="row" style="margin-top: 100px; margin-bottom: 10px">
+        <div class="col" style="margin: auto">
+            <div class="animated slideInDown slower PermanentMarkerFont FontSize2rem" data-aos="zoom-out">
+                    BIBLIOTECARIA
+            </div>
+            <div class="FontSize2rem">
+                Sra. MARÍA FERNANDA LEÓN CATUTO
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 100px; margin-bottom: 10px">
+        <div class="col" style="margin: auto">
+            <div class="animated slideInDown slower PermanentMarkerFont FontSize2rem" data-aos="zoom-out">
+                ODONTÓLOGA
+            </div>
+            <div class="FontSize2rem">
+                Dra. LETTY NARCISA PLAZA CALDERON
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 100px; margin-bottom: 10px">
+        <div class="col" style="margin: auto">
+            <div class="animated slideInDown slower PermanentMarkerFont FontSize2rem" data-aos="zoom-out">
+                PSICÓLOGO – DECE
+            </div>
+            <div class="FontSize2rem">
+                Lic. DIEGO ALEJANDRO SÁNCHEZ VERA
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 100px; margin-bottom: 10px">
+        <div class="col" style="margin: auto">
+            <div class="animated slideInDown slower PermanentMarkerFont FontSize2rem" data-aos="zoom-out">
+                APOYO Y SERVICIO
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 1px; margin-bottom: 100px">
+        <div class="col" style="margin: auto">
+            <table class="table table-striped" data-aos="fade-up" data-aos-duration="2400">
+                <thead>
+                <tr>
+                    <th scope="col" style="background:white; color:Black">No.</th>
+                    <th scope="col" style="background:white; color:Black">NÓMINA</th>
+                    <th scope="col" style="background:white; color:Black">FUNCIÓN</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row" style="background:white; color:Black">8</th>
+                    <td>Sr. PEDRO TITO CABRERA ALCHUNDIA</td>
+                    <td>SERVICIO</td>
+                </tr>
+
+                <tr>
+                    <th scope="row" style="background:white; color:Black">15</th>
+                    <td>Sr. JAVIER EDUARDO CORONEL ESPINOZA</td>
+                    <td>SERVICIO</td>
+                </tr>
+
+                <tr>
+                    <th scope="row" style="background:white; color:Black">27</th>
+                    <td>Sr. NELSON LUCIANO MÁRQUEZ CHÓEZ</td>
+                    <td>APOYO</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
 </div>
 <script>
     $.getScript("{{asset('js/AOSInit.js')}}");
