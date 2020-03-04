@@ -56,7 +56,7 @@
                                    data-toggle="lightbox"
                                    data-type="image"
                                    data-gallery="estudios-sociales"
-                                   data-title="Matemáticas"
+                                   data-title="Estudios Sociales"
                                    data-footer="Contribuir al desarrolla en los estudiantes con capacidades de razonamiento
                             en la vida diaria, en el desarrollo de casa abierta, los estudiantes aplican sus conocimiento
                             y demuestran a través de diferentes actividades sus destrezas. . Casa abierta ayuda a los
